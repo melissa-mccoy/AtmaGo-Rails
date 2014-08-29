@@ -14,7 +14,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem 'rspec-rails', '~> 3.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -26,7 +25,18 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'spring'
+
+# To use Leaflet
+gem 'leaflet-rails'
+# To use mustache
+# gem 'mustache-rails', :require => 'mustache/railtie'
+#geocoder to generate lat,long
+gem "geocoder"
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
